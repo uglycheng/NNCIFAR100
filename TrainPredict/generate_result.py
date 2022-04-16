@@ -51,7 +51,7 @@ def run_different_start_point(tfseed,model_name):
         'train_batch_size':32,
         'dev_batch_size':None,
         'train_set_shuffle_seed':tfseed,
-        'show_train_info_every':5,
+        'show_train_info_every':50,
         'save_model_every':100
     }
     train_loss_records, train_acc_records, dev_loss_records, dev_acc_records = model_life_cycle.train(**train_config)
@@ -113,5 +113,5 @@ result_dir_name = '../Results/%s/'%model_name
 if not os.path.isdir(result_dir_name):
     os.mkdir(result_dir_name)
 
-for i in range(10):
-    run_different_start_point(int(time.time()),model_name)
+# for i in range(10):
+run_different_start_point(int(time.time()),model_name)
