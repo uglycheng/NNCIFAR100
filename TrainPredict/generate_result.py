@@ -46,7 +46,7 @@ def run_different_start_point(tfseed,model_name):
 
     model_life_cycle = ModelLifeCycle(**life_cycle_config)
     train_config = {
-        'EPOCH':5,
+        'EPOCH':200,
         'train_shuffle_buffer_size':50000,
         'train_batch_size':32,
         'dev_batch_size':None,
@@ -113,5 +113,5 @@ result_dir_name = '../Results/%s/'%model_name
 if not os.path.isdir(result_dir_name):
     os.mkdir(result_dir_name)
 
-# for i in range(10):
-run_different_start_point(int(time.time()),model_name)
+for i in range(15):
+    run_different_start_point(int(time.time()),model_name)
