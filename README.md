@@ -1,4 +1,4 @@
-## NN Stability
+## NN CIFAR100
 
 This repo trains models and generates results on CIFAR100.
 
