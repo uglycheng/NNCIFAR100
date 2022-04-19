@@ -9,7 +9,7 @@ import pandas as pd
 import os
 
 def run_different_start_point(tfseed,model_name):
-    tf.random.set_seed(tfseed)
+    # tf.random.set_seed(tfseed)
 
     ds, ds_meta = tfds.load('cifar100', with_info=True)
     train = ds['train']
@@ -113,5 +113,7 @@ result_dir_name = '../Results/%s/'%model_name
 if not os.path.isdir(result_dir_name):
     os.mkdir(result_dir_name)
 
-for i in range(15):
-    run_different_start_point(int(time.time()),model_name)
+# for i in range(15):
+#     run_different_start_point(int(time.time()),model_name)
+
+run_different_start_point(29,model_name)
